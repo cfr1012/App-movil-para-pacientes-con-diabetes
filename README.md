@@ -1,4 +1,4 @@
-# App movil para pacientes diábeticos
+<h1 align="center"> App movil para pacientes diábeticos </h1>
 Planificación ágil de un proyecto de software de ayuda a pacientes con diabetes
 
 ## INTRODUCCIÓN
