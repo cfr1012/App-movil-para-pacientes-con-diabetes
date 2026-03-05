@@ -1,1 +1,79 @@
 Archivo para meter código editable por todos los miembros
+##1. Test de Carga y Latencia (K6 / JavaScript)
+Este script simula el acceso recurrente de usuarios para verificar que el renderizado de la media semanal no sature el sistema.
+
+JavaScript
+
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+
+export let options = {
+    vus: 50, // 50 usuarios concurrentes
+    duration: '30s',
+};
+
+export default function () {
+    // Simula la petición al endpoint que calcula la media y tendencia
+    let res = http.get('https://api.glucosa-app.com/v1/grafico/evolucion-semanal');
+    
+    check(res, {
+        'status es 200': (r) => r.status === 200,
+        'tiempo de respuesta < 1.5s': (r) => r.timings.duration < 1500, // Requisito P95
+    });
+    
+    sleep(1);
+}
+##2. Test de Stress: Cálculo de Tendencias (Jest)
+Un test unitario para verificar que el algoritmo de "Identificar y pronosticar futuras tendencias" es eficiente con grandes volúmenes de datos.
+
+JavaScript
+
+const { calcularTendencia } = require('./metrics-engine');
+
+describe('Rendimiento del Motor de Tendencias', () => {
+    test('Debe procesar 5 años de datos en menos de 500ms', () => {
+        // Generamos un set de datos ficticio masivo (5 años)
+        const registrosMasivos = Array.from({ length: 1825 }, (_, i) => ({
+            fecha: new Date(2020, 0, i),
+            valor: Math.floor(Math.random() * (160 - 80) + 80)
+        }));
+
+        const inicio = performance.now();
+        const resultado = calcularTendencia(registrosMasivos);
+        const fin = performance.now();
+
+        expect(fin - inicio).toBeLessThan(500); // Métrica de éxito
+        expect(resultado).toHaveProperty('pronostico');
+    });
+});
+##3. Middleware de Recolección de Datos (Mejoras Futuras)
+Este fragmento de código se encargaría de "escuchar" el uso de la aplicación para identificar qué funcionalidades necesitan mejoras.
+
+JavaScript
+
+// Middleware para telemetría y análisis de uso
+app.get('/api/grafico/exportar', (req, res) => {
+    const { formato, userId } = req.query;
+
+    // Registro de datos para futuras mejoras
+    TelemetryService.track('export_action', {
+        format: formato, // ¿Prefieren PDF o Excel?
+        timestamp: new Date(),
+        region: req.headers['accept-language']
+    });
+
+    // Lógica de exportación...
+    res.status(200).send('Archivo generado');
+});
+
+// Monitoreo de errores en el pronóstico
+function logUserCorrection(originalTrend, correctedByUser) {
+    if (originalTrend !== correctedByUser) {
+        // Si el usuario corrige la tendencia, guardamos el dato para reentrenar el modelo
+        Database.saveFeedback({
+            expected: originalTrend,
+            actual: correctedByUser,
+            reason: 'Mala detección precoz de desajuste'
+        });
+    }
+}
