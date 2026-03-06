@@ -4,6 +4,11 @@ Bienvenido al manual de usuario oficial. Este documento está diseñado para ayu
 <h2 align="center"> 1. Pantalla de Inicio </h2>
 Al abrir la aplicación, el usuario se encontrará con un panel de control muy intuitivo. 
 
+<div align="center">
+   <img src="InterfazApp.png" width="45%" style="vertical-align: top;">
+   <img src="InterfazApp1.png" width="45%" style="vertical-align: top;">
+</div>
+
 <h2 align="center"> 2. Registro de Mediciones</h2>
 Para registrar un nuevo nivel de glucosa:
 1. Pulsa el botón principal "+" en la pantalla de inicio.
