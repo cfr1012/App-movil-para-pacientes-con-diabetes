@@ -2,20 +2,18 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Las versiones probadas y que ofrecen garantías de funcionamiento y seguridad en el procesamiento de datos son las siguientes:
 
 | Version | Supported          |
 | ------- | ------------------ |
 | 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
+| 5.0.x   | :white_check_mark: |
 | 4.0.x   | :white_check_mark: |
 | < 4.0   | :x:                |
 
+Versiones inferiores a la 4 no garantizan el cumplimiento de todos los protocolos de seguridad respecto a la privacidad de los datos, ya que fueron modelos generados 
+para entrenar la herramiento como bien avisa el inicio de esta app.
+
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+No se ha detectado ninguna vulnerabilidad. Se han pasado los controles de calidad y seguridad debidos, y se ofrecen garantías de protección de los datos sensibles del usuario.
