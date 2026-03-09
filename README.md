@@ -21,9 +21,13 @@ En cualquier momento y sin requerir de acceso a conexión red, el paciente puede
 Desde su área privada, el susuario tiene acceso a todas las mediciones resgitradas desde el inicio de su registro en la app. Dichas mediciones pueden ser borradas, o modificar los elementos o notas registradas junto a las mismas.
 
 <h2 align="center"> 🚨 ACTIVACIÓN DEL PROTOCOLO DE EMERGENCIA </h2>
-En caso de registrarse valores ligeramente alterados o desviados del valor óptima se dan indicaciones al usuario para que él mismo pueda regular estos nivel y recuperar un rango ´óptimo en el menor tiempo posible. En caso de registrar un valor que pone en riesgo la salud del mismo de manera grave, se intenta conectar con este para iniciar un protocolo de emergencia. En caso de no poder establecer contacto con la misma, se puede contactar con su persona de emergencia editada por el usuario en su área privada. Cabe destacar que simpre que se registren mediciones en rango peligroso, se requiere de otra medición complementaria para verificar el valor y descartar un fallo en el registro o medición.
+En caso de registrarse valores ligeramente alterados o desviados del valor óptima se dan indicaciones al usuario para que él mismo pueda regular estos nivel y recuperar un rango óptimo en el menor tiempo posible. En caso de registrar un valor que pone en riesgo la salud del mismo de manera grave, se intenta conectar con este para iniciar un protocolo de emergencia. En caso de no poder establecer contacto con la misma, se puede contactar con su persona de emergencia editada por el usuario en su área privada. Cabe destacar que simpre que se registren mediciones en rango peligroso, se requiere de otra medición complementaria para verificar el valor y descartar un fallo en el registro o medición.
 
 <h2 align="center"> 📖 ENLACE DE ACCESO AL MANUAL DE USUARIO </h2>
 <div align="center">
   <h3><a href="./ManualUsuario.md">Haz clic aquí para ver el Manual de Usuario detallado</a></h3>
+</div>
+<h2 align="center"> ENLACE A NUESTRA PÁGINA WEB </h2>
+<div align="center">
+  <h3><a href="https://crmncontrolapp.my.canva.site/>Accede a nuestra web</a></h3>
 </div>
