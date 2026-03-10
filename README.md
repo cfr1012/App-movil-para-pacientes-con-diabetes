@@ -27,3 +27,6 @@ En caso de registrarse valores ligeramente alterados o desviados del valor ópti
 <div align="center">
   <h3><a href="./ManualUsuario.md">Haz clic aquí para ver el Manual de Usuario detallado</a></h3>
 </div>
+
+<h2 align="center"> 👩‍💻 ENLACE A PÁGINA WEB </h2>
+[Enlace a página web](https://crmncontrolapp.my.canva.site/)
