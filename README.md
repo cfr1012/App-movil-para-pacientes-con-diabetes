@@ -29,4 +29,6 @@ En caso de registrarse valores ligeramente alterados o desviados del valor ópti
 </div>
 
 <h2 align="center"> 👩‍💻 ENLACE A PÁGINA WEB </h2>
-[Enlace a página web](https://crmncontrolapp.my.canva.site)
+<div align="center">
+<a href="https://crmncontrolapp.my.canva.site">Enlace a página web</a>
+</div>
